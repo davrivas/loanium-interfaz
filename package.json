@@ -1,8 +1,8 @@
 {
     "name": "loanium-interfaz",
     "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "davrivas",
-    "contributors": [],
+    "keywords": ["loanium", "biblioteca", "prestamo", "donacion"],
+    "author": "David Rivas y Alexander Vargas",
+    "contributors": ["David Rivas", "Alexander Vargas"],
     "dependencies": {}
 }

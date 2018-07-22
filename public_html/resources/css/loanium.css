@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #2a4765;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p, label, button, input[type=submit], a {
+    color: #2a4765;
+    font-weight: normal;
+}
+
+p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+button, input[type=submit] {
+    font-size: 15px;
+    line-height: 28px;
+    height: 78px;
+    padding: 31px 54px 31px 54px;
+    border-radius: 35px;
+}
+
+a {
+    font-size: 18px;
+    line-height: 42px;
+}
+
+/*Poner los otros botones (colores)*/
+
+input {
+    font-weight: lighter;
+    color: #dadee1;
+    /*height: 2px;*/
+    border: 0;
+    border-bottom: 1px solid #dadee1;
+}
+
+input.ng-touched {
+    color: #eef0f0;
+    border-bottom-color: #20a598;
+}
+
+input.typing {
+    color: #163f43;
+    border-bottom-color: #dadee1;
+}
+
+input.ng-dirty {
+    color: #163f43;
+    border-bottom-color: #163f43;
+}
+
+input.ng-valid {
+    color: #eef0f0;
+    border-bottom-color: #20a598;
+}
+
+input.ng-invalid {
+    color: #163f43;
+    border-bottom-color: #dadee1;
+}
