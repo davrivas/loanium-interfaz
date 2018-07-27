@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Catalogo - Loanium</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="resources/img/logo/logo-cliente-sin-letras.png"/>
+        <script src="resources/framework/angularjs-v.1.7.2/js/angular.min.js"></script>
+        <link rel="stylesheet" href="resources/framework/bootstrap-v.4.1.2/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="resources/framework/fontawesome-free-5.2.0-web/css/all.min.css">
+        <link rel="stylesheet" href="resources/css/loanium.css">
+        <link rel="stylesheet" href="resources/css/cliente/navbar.css">
+        <link rel="stylesheet" href="resources/css/cliente/catalogo.css">
+    </head>
+    <body ng-app>
+        <div class="container-fluid">
+            <nav id="navbar-loanium" class="navbar navbar-expand-lg fixed-top navegacion">
+                <a class="navbar-brand" href="#">
+                    <img src="resources/img/logo/logo-cliente-sin-letras.png" alt="Logo Loanium" width="30" height="30">
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbar-contenido">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><span class="fa fa-home"></span> Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="fa fa-book"></span> Donaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="fa fa-question"></span> PQRS</a>
+                        </li>
+                        <!--                        <li class="nav-item">
+                                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#iniciar-sesion"><span class="fa fa-sign-in-alt"></span> Iniciar sesión</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#registrarse"><span class="fa fa-user-plus"></span> Registrarse</a>
+                                                </li>-->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="fa fa-sign-out-alt"></span> Cerrar sesión</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="input-loanium mr-sm-2" type="search" placeholder="Buscar en el catálogo" aria-label="Buscar">
+                        <button class="btn-loanium btn-cliente mr-1 my-2 my-sm-0" type="submit"><span class="fa fa-search"></span></button>
+                        <a class="ml-1" href="#" data-toggle="modal" data-target="#busqueda-avanzada"><span class="fa fa-filter"></span> Búsqueda avanzada</a>
+                    </form>
+                </div>
+            </nav>
+            
+            <div class="mt-3">&nbsp;</div>
+            
+            
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-6 caja-resultado">
+                    <div class="resultado">
+                        <p><strong>Tipo de material: </strong> Lorem.</p>
+                        <p><strong>Título:</strong> Lorem ipsum.</p>
+                        <p><strong>Autor:</strong> Lorem ipsum dolor.</p>
+                        <p><strong>Fecha de publicación:</strong> 2018</p>
+                        <p><strong>Temática:</strong> Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            <strong>Descripción</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, harum, dicta neque reiciendis accusantium veritatis.
+                        </p>
+                        <p><strong>ISBN: </strong> 978-567-678-56-67</p>
+                        <p><strong>Editorial:</strong> Lorem ipsum.</p>
+                        <p><strong>Idioma:</strong> Español</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 caja-resultado">
+                    <div class="resultado">
+                        <p><strong>Tipo de material: </strong> Lorem.</p>
+                        <p><strong>Título:</strong> Lorem ipsum.</p>
+                        <p><strong>Autor:</strong> Lorem ipsum dolor.</p>
+                        <p><strong>Fecha de publicación:</strong> 2018</p>
+                        <p><strong>Temática:</strong> Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            <strong>Descripción</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, harum, dicta neque reiciendis accusantium veritatis.
+                        </p>
+                        <p><strong>ISBN: </strong> 978-567-678-56-67</p>
+                        <p><strong>Editorial:</strong> Lorem ipsum.</p>
+                        <p><strong>Idioma:</strong> Español</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 caja-resultado">
+                    <div class="resultado">
+                        <p><strong>Tipo de material: </strong> Lorem.</p>
+                        <p><strong>Título:</strong> Lorem ipsum.</p>
+                        <p><strong>Autor:</strong> Lorem ipsum dolor.</p>
+                        <p><strong>Fecha de publicación:</strong> 2018</p>
+                        <p><strong>Temática:</strong> Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            <strong>Descripción</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, harum, dicta neque reiciendis accusantium veritatis.
+                        </p>
+                        <p><strong>ISBN: </strong> 978-567-678-56-67</p>
+                        <p><strong>Editorial:</strong> Lorem ipsum.</p>
+                        <p><strong>Idioma:</strong> Español</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 caja-resultado">
+                    <div class="resultado">
+                        <p><strong>Tipo de material: </strong> Lorem.</p>
+                        <p><strong>Título:</strong> Lorem ipsum.</p>
+                        <p><strong>Autor:</strong> Lorem ipsum dolor.</p>
+                        <p><strong>Fecha de publicación:</strong> 2018</p>
+                        <p><strong>Temática:</strong> Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            <strong>Descripción</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, harum, dicta neque reiciendis accusantium veritatis.
+                        </p>
+                        <p><strong>ISBN: </strong> 978-567-678-56-67</p>
+                        <p><strong>Editorial:</strong> Lorem ipsum.</p>
+                        <p><strong>Idioma:</strong> Español</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 caja-resultado">
+                    <div class="resultado">
+                        <p><strong>Tipo de material: </strong> Lorem.</p>
+                        <p><strong>Título:</strong> Lorem ipsum.</p>
+                        <p><strong>Autor:</strong> Lorem ipsum dolor.</p>
+                        <p><strong>Fecha de publicación:</strong> 2018</p>
+                        <p><strong>Temática:</strong> Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            <strong>Descripción</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, harum, dicta neque reiciendis accusantium veritatis.
+                        </p>
+                        <p><strong>ISBN: </strong> 978-567-678-56-67</p>
+                        <p><strong>Editorial:</strong> Lorem ipsum.</p>
+                        <p><strong>Idioma:</strong> Español</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/framework/bootstrap-v.4.1.2/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="resources/framework/bootstrap-v.4.1.2/js/popper.min.js"></script>
+        <script src="resources/framework/bootstrap-v.4.1.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

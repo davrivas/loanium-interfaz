@@ -1,0 +1,10 @@
+.caja-resultado {
+    padding: 15px;
+}
+
+.resultado {
+    border: 1px solid #2a4765;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #2a4765;
+}

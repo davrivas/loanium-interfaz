@@ -1,16 +1,285 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Inicio - Loanium</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="resources/img/logo/logo-cliente-sin-letras.png"/>
         <script src="resources/framework/angularjs-v.1.7.2/js/angular.min.js"></script>
         <link rel="stylesheet" href="resources/framework/bootstrap-v.4.1.2/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="resources/framework/fontawesome-free-5.2.0-web/css/all.min.css">
         <link rel="stylesheet" href="resources/css/loanium.css">
+        <link rel="stylesheet" href="resources/css/cliente/navbar.css">
+        <link rel="stylesheet" href="resources/css/cliente/slider.css">
     </head>
     <body ng-app>
-        <h1>Loanium</h1>        
-        <p><a href="pruebas.html">Pruebas</a></p>        
+        <div class="container-fluid">
+            <nav id="navbar-loanium" class="navbar navbar-expand-lg fixed-top navegacion">
+                <a class="navbar-brand" href="#">
+                    <img src="resources/img/logo/logo-cliente-sin-letras.png" alt="Logo Loanium" width="30" height="30">
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbar-contenido">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><span class="fa fa-home"></span> Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="fa fa-book"></span> Donaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="fa fa-question"></span> PQRS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#iniciar-sesion"><span class="fa fa-sign-in-alt"></span> Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#registrarse"><span class="fa fa-user-plus"></span> Registrarse</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="input-loanium mr-sm-2" type="search" placeholder="Buscar en el catálogo" aria-label="Buscar">
+                        <button class="btn-loanium btn-cliente mr-1 my-2 my-sm-0" type="submit"><span class="fa fa-search"></span></button>
+                        <a class="ml-1" href="#" data-toggle="modal" data-target="#busqueda-avanzada"><span class="fa fa-filter"></span> Búsqueda avanzada</a>
+                    </form>
+                </div>
+            </nav>
+
+            <div id="loanium-slider" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#loanium-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#loanium-slider" data-slide-to="1"></li>
+                    <li data-target="#loanium-slider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="resources/img/cliente/slider-1.jpg" alt="Primer slide">
+                        <div class="carousel-caption titulo-slider d-none d-md-block">
+                            <h5>Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="resources/img/cliente/slider-2.jpg" alt="Segundo slide">
+                        <div class="carousel-caption titulo-slider d-none d-md-block">
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="resources/img/cliente/slider-3.jpg" alt="Tercer slide">
+                        <div class="carousel-caption titulo-slider d-none d-md-block">
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, laborum?</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#loanium-slider" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#loanium-slider" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="iniciar-sesion" class="modal" tabindex="-1" role="dialog" aria-labelledby="iniciar-sesion-titulo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="iniciar-sesion-titulo">Iniciar sesión</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <span class="fa fa-close cerrar-modal"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <form id="iniciar-sesion-form" novalidate>
+                        <div class="modal-body">
+                            <div class="col mb-5">
+                                <label for="tipo-documento-login">Tipo de documento</label>
+                                <div class="col">
+                                    <select name="tipo-documento-login" id="tipo-documento-login" class="input-loanium input-loanium-block" required>
+                                        <option value>Seleccionar</option>
+                                        <option value="bucle">bucle</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col mb-5">
+                                <label for="documento-login">Documento</label>
+                                <div class="col">
+                                    <input id="documento-login" name="documento-login" class="input-loanium input-loanium-block" type="number" required>
+                                </div>
+                            </div>
+                            <div class="col mb-5">
+                                <label for="clave-login">Clave</label>
+                                <div class="col">
+                                    <input id="clave-login" name="clave-login" class="input-loanium input-loanium-block" type="password" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input class="btn-loanium btn-cliente" type="submit" value="Iniciar sesión">
+                            <button class="btn-loanium btn-defecto" data-dismiss="modal">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div id="registrarse" class="modal" tabindex="-1" role="dialog" aria-labelledby="registrarse-titulo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="registrarse-titulo">Registrarse</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <span class="fa fa-close cerrar"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <form id="registrarse-form" novalidate>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="nombres-registrarse">Nombres <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="nombres-registrarse" name="nombres-registrarse" type="text" maxlength="45" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="apellidos-registrarse">Apellidos <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="apellidos-registrarse" name="apellidos-registrarse" type="text" maxlength="45" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="tipo-documento-registrarse">Tipo de documento <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <select name="tipo-documento-registrarse" id="tipo-documento-registrarse" class="input-loanium input-loanium-block" required>
+                                        <option value>Seleccionar</option>
+                                        <option value="bucle">bucle</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="documento-registrarse">Documento <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="documento-registrarse" name="documento-registrarse" type="number" min="0" max="999999999999999" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="correo-electronico-registrarse">Correo electrónico <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="correo-electronico-registrarse" name="correo-electronico-registrarse" type="email" maxlength="45" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="confirmacion-correo-electronico-registrarse">Confirmación de correo electrónico <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="confirmacion-correo-electronico-registrarse" name="confirmacion-correo-electronico-registrarse" type="email" maxlength="45" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="clave-registrarse">Clave <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="clave-registrarse" name="clave-registrarse" type="password" maxlength="45" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="confirmacion-clave-registrarse">Confirmación de clave <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="confirmacion-clave-registrarse" name="confirmacion-clave-registrarse" type="password" maxlength="45" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="fecha-nacimiento-registrarse">Fecha de nacimiento <span class="campo-requerido">*</span></label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="fecha-nacimiento-registrarse" name="fecha-nacimiento-registrarse" type="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="telefono-registrarse">Teléfono (opcional)</label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="telefono-registrarse" name="telefono-registrarse" type="tel" maxlength="10">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input class="btn-loanium btn-cliente" type="submit" value="Registrarse">
+                            <button class="btn-loanium btn-defecto" data-dismiss="modal">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div id="busqueda-avanzada" class="modal" tabindex="-1" role="dialog" aria-labelledby="busqueda-avanzada-titulo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="busqueda-avanzada-titulo">Búsqueda avanzada</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <span class="fa fa-close cerrar"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <form id="busqueda-avanzada-form" novalidate>
+                        <div class="modal-body">
+                            <small>El material será filtrado si alguno de los campos que se digiten coincidan con el material disponible en nuestra base de datos</small>
+                            
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="tipo-material">Tipo de material</label>
+                                    <div class="col">
+                                        <select class="input-loanium input-loanium-block" id="tipo-material" name="tipo-material">
+                                            <option selected value="Cualquiera">Cualquiera</option>
+                                            <option value="buble">buble</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="tematica">Temática</label>
+                                    <div class="col">
+                                        <select class="input-loanium input-loanium-block" id="tematica" name="tematica">
+                                            <option value="Cualquiera">Cualquiera</option>
+                                            <option value="bucle">bucle</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="titulo">Título</label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="titulo" name="titulo" type="text" maxlength="45">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="autor">Autor</label>
+                                    <div class="col">
+                                        <input class="input-loanium input-loanium-block" id="autor" name="autor" type="text" maxlength="45">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-loanium btn-cliente" type="submit">
+                                <span class="fa fa-search"></span> Buscar
+                            </button>
+                            <button class="btn-loanium btn-defecto" data-dismiss="modal">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <script src="resources/framework/bootstrap-v.4.1.2/js/jquery-3.3.1.slim.min.js"></script>
         <script src="resources/framework/bootstrap-v.4.1.2/js/popper.min.js"></script>
         <script src="resources/framework/bootstrap-v.4.1.2/js/bootstrap.min.js"></script>

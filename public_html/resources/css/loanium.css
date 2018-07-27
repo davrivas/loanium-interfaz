@@ -21,7 +21,7 @@ h3 {
     font-size: 25px;
 }
 
-p, label, button, input[type=submit], a {
+p, label, a, a:hover {
     color: #2a4765;
     font-weight: normal;
 }
@@ -31,27 +31,90 @@ p {
     line-height: 28px;
 }
 
-button, input[type=submit] {
-    font-size: 15px;
-    line-height: 28px;
-    height: 78px;
-    padding: 31px 54px 31px 54px;
-    border-radius: 35px;
-}
-
 a {
     font-size: 18px;
     line-height: 42px;
+    cursor: pointer;
 }
 
-/*Poner los otros botones (colores)*/
+a:focus {
+    outline: none;
+}
 
-input {
+.btn-loanium {
+    font-size: 15px;
+    line-height: 28px;
+    padding: 15px 50px;
+    border-radius: 35px;
+    border: 0;
+    transition: .5s;
+}
+
+.btn-loanium-block {
+    width: 100%;
+}
+
+.btn-loanium:focus {
+    outline: none;
+}
+
+.btn-admin {
+    background-color: #fef1eb;
+    color: #ff696a;
+}
+
+.btn-admin:hover, .btn-admin:focus {
+    background-color: #ff696a;
+    color: #fef1eb;
+}
+
+.btn-admin:focus {
+    box-shadow: 1px 1px 1px 5px #fef1eb;
+}
+
+.btn-cliente {
+    background-color: #e4f8f7;
+    color: #21a598;
+}
+
+.btn-cliente:hover, .btn-cliente:focus {
+    background-color: #21a598;
+    color: #e4f8f7;
+}
+
+.btn-cliente:focus {
+    box-shadow: 1px 1px 1px 5px #e4f8f7;
+}
+
+.btn-defecto {
+    background-color: #f3f7f8;
+    color: #9aa7b5;
+}
+
+.btn-defecto:hover {
+    background-color: #eaeff2;
+    color: #7d909f;
+}
+
+.btn-defecto:focus {
+    background-color: #d7dfe2;
+    color: #37516d;
+}
+
+.input-loanium {
     font-weight: lighter;
-    color: #dadee1;
-    /*height: 2px;*/
     border: 0;
     border-bottom: 1px solid #dadee1;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.input-loanium:focus {
+    outline: none;
+}
+
+.input-loanium-block {
+    width: 100%;
 }
 
 input.ng-touched {
@@ -77,4 +140,12 @@ input.ng-valid {
 input.ng-invalid {
     color: #163f43;
     border-bottom-color: #dadee1;
+}
+
+span.campo-requerido {
+    color: #f00;
+}
+
+.cerrar-modal {
+    color: #2a4765;
 }
