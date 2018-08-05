@@ -15,5 +15,9 @@
         "David Rivas",
         "Alexander Vargas"
     ],
-    "dependencies": {}
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "^2.24.6",
+        "gulp": "^3.9.1"
+    }
 }

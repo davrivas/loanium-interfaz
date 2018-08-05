@@ -10,13 +10,13 @@ var gulp = require('gulp'),
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: './'            
+            baseDir: './public_html/'            
         }
     });
 
-    gulp.watch('./*.html').on('change', browserSync.reload);
-    gulp.watch('./resources/css/*.css').on('change', browserSync.reload);
-    gulp.watch('./resources/js/*.js').on('change', browserSync.reload);
+    gulp.watch('./public_html/*.html').on('change', browserSync.reload);
+    gulp.watch('./public_html/resources/css/*.css').on('change', browserSync.reload);
+    gulp.watch('./public_html/resources/js/*.js').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browserSync']);
